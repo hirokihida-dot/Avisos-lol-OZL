@@ -1,0 +1,43 @@
+# Calendario del equipo. Fechas en formato "AAAA-MM-DD HH:MM" (hora de Madrid),
+# siempre entre comillas.
+
+nombre_bot: "Avisos del equipo"
+
+# Mejor poner la URL en la variable de entorno DISCORD_WEBHOOK y dejar esto vacío
+webhook_url: ""
+
+# ID del rol a mencionar (clic derecho en el rol > Copiar ID, con el modo
+# desarrollador de Discord activado). Déjalo vacío para no mencionar a nadie.
+rol_mencion: ""
+mencionar_en: [partido, deadline, encuesta]
+
+# Entrenamientos que se repiten cada semana
+entrenamientos_semanales:
+  - dia: martes
+    hora: "21:00"
+    titulo: "Entrenamiento semanal"
+    detalles: "Revisión de VODs + scrims"
+  - dia: jueves
+    hora: "21:00"
+    titulo: "Scrims"
+
+# Días concretos en que no hay entrenamiento semanal (festivos, exámenes...)
+saltar_entrenamientos:
+  - "2026-12-08"
+
+# Eventos sueltos. Tipos: partido, entrenamiento, deadline, encuesta
+eventos:
+  - tipo: partido
+    titulo: "Jornada 3 vs Rival UV"
+    fecha: "2026-10-22 19:00"
+    detalles: "Conectaos 30 min antes al canal de voz."
+
+  - tipo: deadline
+    titulo: "Enviar disponibilidad de noviembre"
+    fecha: "2026-10-24 23:59"
+    enlace: "https://forms.gle/xxxxx"
+
+  - tipo: encuesta
+    titulo: "Votar horario de entrenamientos"
+    fecha: "2026-10-21 20:00"
+    detalles: "Encuesta en #general"
