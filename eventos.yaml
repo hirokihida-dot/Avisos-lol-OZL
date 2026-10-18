@@ -27,6 +27,12 @@ saltar_entrenamientos:
 
 # Eventos sueltos. Tipos: partido, entrenamiento, deadline, encuesta
 eventos:
+  - tipo: Prueba
+    titulo: "Mensaje de prueba a ver si esto furula"
+    fecha: "2026-10-18 14:35"
+    detalles: "Furula peña."
+
+
   - tipo: partido
     titulo: "Jornada 3 vs Rival UV"
     fecha: "2026-10-22 19:00"
