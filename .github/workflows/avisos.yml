@@ -1,0 +1,40 @@
+name: Avisos Discord
+
+on:
+  schedule:
+    # Cada 10 minutos (minutos 3, 13, 23...: evita la saturación de GitHub en :00)
+    - cron: "3,13,23,33,43,53 * * * *"
+  workflow_dispatch: {}   # botón "Run workflow" para lanzarlo a mano
+
+permissions:
+  contents: write         # para guardar enviados.json en el repo
+
+concurrency:
+  group: avisos
+  cancel-in-progress: false
+
+jobs:
+  avisos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Enviar avisos
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python avisos.py
+
+      - name: Guardar avisos enviados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add enviados.json
+          git diff --cached --quiet || (git commit -m "Actualizar avisos enviados" && git pull --rebase && git push)
