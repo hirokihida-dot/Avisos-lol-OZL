@@ -31,18 +31,17 @@ eventos:
     titulo: "Prueba 2"
     fecha: "2026-10-18 16:30"
 
-
   - tipo: partido
-    titulo: "Jornada 3 vs Rival UV"
-    fecha: "2026-10-22 19:00"
+    titulo: "Jornada 1 vs BOCATA DE LOMO YA"
+    fecha: "2026-10-19 22:00"
     detalles: "Conectaos 30 min antes al canal de voz."
 
   - tipo: deadline
-    titulo: "Enviar disponibilidad de noviembre"
-    fecha: "2026-10-24 23:59"
-    enlace: "https://forms.gle/xxxxx"
+    titulo: "Fotografías"
+    fecha: "2026-10-19 11:00"
+    enlace: ""
 
   - tipo: encuesta
-    titulo: "Votar horario de entrenamientos"
-    fecha: "2026-10-21 20:00"
-    detalles: "Encuesta en #general"
+    titulo: "Votar horario de partidos"
+    fecha: "2026-10-20 21:00"
+    detalles: "Encuesta en #disponibilidad"
