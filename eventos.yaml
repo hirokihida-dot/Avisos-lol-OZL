@@ -27,21 +27,13 @@ saltar_entrenamientos:
 
 # Eventos sueltos. Tipos: partido, entrenamiento, deadline, encuesta
 eventos:
-  - tipo: deadline
-    titulo: "Prueba 2"
-    fecha: "2026-10-18 16:30"
 
   - tipo: partido
-    titulo: "Jornada 1 vs BOCATA DE LOMO YA"
-    fecha: "2026-10-19 22:00"
+    titulo: "Jornada 1 vs BOCATA DE LOMO YA (reajuste)"
+    fecha: "2026-11-06 22:00"
     detalles: "Conectaos 30 min antes al canal de voz."
-
-  - tipo: deadline
-    titulo: "Fotografías"
-    fecha: "2026-10-19 11:00"
-    enlace: ""
 
   - tipo: encuesta
     titulo: "Votar horario de partidos"
-    fecha: "2026-10-20 21:00"
+    fecha: "2026-10-25 23:59"
     detalles: "Encuesta en #disponibilidad"
